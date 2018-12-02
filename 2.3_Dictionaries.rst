@@ -1,0 +1,376 @@
+
+
+
+.. raw:: html
+
+   <h1 align="center">
+
+Sets and Dictionaries
+
+.. raw:: html
+
+   </h1>
+
+Table of Contents
+-----------------
+
+.. raw:: html
+
+   <div class="alert alert-block alert-info" style="margin-top: 20px">
+
+.. raw:: html
+
+   <li>
+
+Dictionaries
+
+.. raw:: html
+
+   </li>
+
+.. raw:: html
+
+   <p>
+
+.. raw:: html
+
+   </p>
+
+Estimated Time Needed: 20 min
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <h2 align="center">
+
+Dictionaries in Python
+
+.. raw:: html
+
+   </h2>
+
+A dictionary consists of keys and values. It is helpful to compare a
+dictionary to a list. Instead of the numerical indexes such as a list,
+dictionaries have keys. These keys are labels that are used to access
+values within a dictionary.
+
+.. raw:: html
+
+   <h4 align="center">
+
+A Comparison of a Dictionary to a list: Instead of the numerical indexes
+like a list, dictionaries have keys.
+
+.. raw:: html
+
+   </h4>
+
+An example of a Dictionary **Dict**:
+
+.. code:: python
+
+    Dict={"key1":1,"key2":"2","key3":[3,3,3],"key4":(4,4,4),('key5'):5,(0,1):6}
+    Dict
+
+The keys can be strings:
+
+.. code:: python
+
+    Dict["key1"]
+
+Keys can also be any immutable object such as a tuple:
+
+.. code:: python
+
+    Dict[(0,1)]
+
+Each key is separated from its value by a colon "**:**". Commas separate
+the items, and the whole dictionary is enclosed in curly braces. An
+empty dictionary without any items is written with just two curly
+braces, like this "**{}**".
+
+.. code:: python
+
+    release_year_dict = {"Thriller":"1982", "Back in Black":"1980", \
+                        "The Dark Side of the Moon":"1973", "The Bodyguard":"1992", \
+                        "Bat Out of Hell":"1977", "Their Greatest Hits (1971-1975)":"1976", \
+                        "Saturday Night Fever":"1977", "Rumours":"1977"}
+    release_year_dict
+
+In summary, like a list, a dictionary holds a sequence of elements. Each
+element is represented by a key and its corresponding value.
+Dictionaries are created with two curly braces containing keys and
+values separated by a colon. For every key, there can only be a single
+value, however, multiple keys can hold the same value. Keys can only be
+strings, numbers, or tuples, but values can be any data type.
+
+It is helpful to visualize the dictionary as a table, as in figure 9.
+The first column represents the keys, the second column represents the
+values.
+
+.. raw:: html
+
+   <h4 align="center">
+
+Figure 9: Table representing a Dictionary
+
+.. raw:: html
+
+   </h4>
+
+You will need this dictionary for the next two questions :
+
+.. code:: python
+
+    soundtrack_dic = { "The Bodyguard":"1992", "Saturday Night Fever":"1977"}
+    soundtrack_dic 
+
+In the dictionary "soundtrack\_dict" what are the keys ?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="Dict1" class="collapse">
+
+::
+
+    The Keys "The Bodyguard" and "Saturday Night Fever" 
+
+.. raw:: html
+
+   </div>
+
+In the dictionary "soundtrack\_dict" what are the values ?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="Dict2" class="collapse">
+
+::
+
+    The values are "1992" and "1977"
+
+.. raw:: html
+
+   </div>
+
+You can retrieve the values based on the names:
+
+.. code:: python
+
+    release_year_dict['Thriller'] 
+
+This corresponds to:
+
+.. raw:: html
+
+   <h4 align="center">
+
+Table used to represent accessing the value for "Thriller"
+
+.. raw:: html
+
+   </h4>
+
+Similarly for The Bodyguard
+
+.. code:: python
+
+    release_year_dict['The Bodyguard'] 
+
+.. raw:: html
+
+   <h4 align="center">
+
+Accessing the value for the "The Bodyguard"
+
+.. raw:: html
+
+   </h4>
+
+Now let us retrieve the keys of the dictionary using the method
+**release\_year\_dict()**:
+
+.. code:: python
+
+    release_year_dict.keys() 
+
+You can retrieve the values using the method **``values()``**:
+
+.. code:: python
+
+    release_year_dict.values() 
+
+We can add an entry:
+
+.. code:: python
+
+    release_year_dict['Graduation']='2007'
+    release_year_dict
+
+We can delete an entry:
+
+.. code:: python
+
+    del(release_year_dict['Thriller'])
+    del(release_year_dict['Graduation'])
+    release_year_dict
+
+We can verify if an element is in the dictionary:
+
+.. code:: python
+
+    'The Bodyguard' in release_year_dict
+
+The Albums 'Back in Black', 'The Bodyguard' and 'Thriller' have the following music recording sales in millions 50, 50 and 65 respectively:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+a) Create a dictionary “album\_sales\_dict” where the keys are the album name and the sales in millions are the values.
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="q9" class="collapse">
+
+::
+
+    album_sales_dict= { "The Bodyguard":50, "Back in Black":50,"Thriller":65}
+
+.. raw:: html
+
+   </div>
+
+b) Use the dictionary to find the total sales of "Thriller":
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="q10b" class="collapse">
+
+::
+
+    album_sales_dict["Thriller"]
+
+.. raw:: html
+
+   </div>
+
+c) Find the names of the albums from the dictionary using the method "keys":
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="q10c" class="collapse">
+
+::
+
+    album_sales_dict.keys()
+
+d) Find the names of the recording sales​ from the dictionary using the method "values":
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <div align="right">
+
+Click here for the solution
+
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="q10d" class="collapse">
+
+::
+
+    album_sales_dict.values()
+
+.. raw:: html
+
+   </div>
+
+
+
+About the Authors:
+==================
+
+`Joseph
+Santarcangelo <https://www.linkedin.com/in/joseph-s-50398b136/>`__ has a
+PhD in Electrical Engineering, his research focused on using machine
+learning, signal processing, and computer vision to determine how videos
+impact human cognition. Joseph has been working for IBM since he
+completed his PhD.
+
+.. raw:: html
+
+   <hr>
+
+Copyright © 2017
+`cognitiveclass.ai <cognitiveclass.ai?utm_source=bducopyrightlink&utm_medium=dswb&utm_campaign=bdu>`__.
+This notebook and its source code are released under the terms of the
+`MIT License <https://bigdatauniversity.com/mit-license/>`__.
